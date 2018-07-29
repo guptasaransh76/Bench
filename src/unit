@@ -1,0 +1,83 @@
+<div className="dropdown">
+							  <button className="btn btn-dafault dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+							  	Today
+							  </button>
+							  <div className="dropdown-menu" aria-labelledby="dropdownMenuButton">
+							    <a className="dropdown-item" href="#">Last 7 days</a>
+							    <a className="dropdown-item" href="#">This Month</a>
+							    <a className="dropdown-item" href="#">custom</a>
+							  </div>
+							</div>
+
+
+							      						<button className="btn btn-pimary dropdown-toggle" type="button" id="dropdownMenuButton" 
+	      						data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" onChange={this.selectHandler}>
+	      							Filter
+	      						</button>
+	      						<div className="dropdown-menu" aria-labelledby="dropdownMenuButton">
+	      							<a className="dropdown-item" value="today" href="#">Today</a>
+							    	<a className="dropdown-item" value="week" href="#">Last 7 days</a>
+								    <a className="dropdown-item" value="month" href="#">This Month</a>
+								    <a className="dropdown-item" value="custom" href="#">custom</a>
+							  	</div>
+	      					</div>
+
+
+
+	      					import React from 'react';
+import paginationFactory from 'react-bootstrap-table2-paginator';
+import BootstrapTable from 'react-bootstrap-table-next';
+
+
+export default class Table extends React.Component{
+
+  constructor(){
+    super();
+
+    this.state = {
+      customTotal: (from, to, size) => (
+      <span className="react-bootstrap-table-pagination-total">
+        Showing { from } to { to } of { size } Results
+      </span>
+      ),
+
+       options: {
+        paginationSize: 4,
+        pageStartIndex: 0,
+        // alwaysShowAllBtns: true, // Always show next and previous button
+        // withFirstAndLast: false, // Hide the going to First and Last page button
+        // hideSizePerPage: true, // Hide the sizePerPage dropdown always
+        // hidePageListOnlyOnePage: true, // Hide the pagination list when only one page
+        firstPageText: 'First',
+        prePageText: 'Back',
+        nextPageText: 'Next',
+        lastPageText: 'Last',
+        nextPageTitle: 'First page',
+        prePageTitle: 'Pre page',
+        firstPageTitle: 'Next page',
+        lastPageTitle: 'Last page',
+        showTotal: true,
+        paginationTotalRenderer: this.customTotal,
+        sizePerPageList: [{
+          text: '5', value: 5
+        }, {
+          text: '10', value: 10
+        }, {
+          text: 'All', value: products.length
+        }] // A numeric array is also available. the purpose of above example is custom the text
+      }
+    }
+    
+  }
+  
+
+  render(){
+    return(
+      <div>
+        <BootstrapTable keyField='id' pagination={ paginationFactory(this.options) } />
+      </div>
+    );
+  }
+}
+
+

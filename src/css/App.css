@@ -1,0 +1,248 @@
+.Nav{
+  height: 10vh;
+  width: 100%;
+  background: red;
+  display: flex;
+  position: fixed;
+  top: 0;
+}
+
+.NavLeft{
+  width: 20vw;
+  background: #6fc2f2;
+  display: flex;
+}
+
+.imageDisplay{
+  width: 4vw;
+  padding: 7px 2px 7px 2px;
+}
+
+.ButtonOut{
+  background-color: #b7c9e2;
+  border: none;
+  color: white;
+  padding: 20px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+  border-radius: 50%;
+}
+
+.nameDisplay{
+  width: 16vw;
+  padding: 19px 2px 19px 10px;
+  font-size: 22px;
+  color: white;
+  font-family: fantasy;
+}
+
+.NavRight{
+  width: 80vw;
+  background: #3baddc;
+  display: flex;
+}
+
+.homename{
+  padding: 23px 2px 0px 15px;
+  font-size: 17px;
+  color: white;
+}
+
+.homeimg{
+  padding: 25px 0px 0px 35px;
+  font-size: 16px;
+  color: white;
+}
+
+.Bottom{
+  width: 100%;
+  background: white;
+  margin-top: 10vh;
+  float: left;
+}
+
+.Left{
+  height: 93vh;
+  width: 20vw;
+  background: #e3eaef;
+  border-right: 1px solid #f2f2f2;
+  position: fixed;
+
+}
+
+.main{
+  background: white;
+  margin-left: 20vw;
+  display: flex;
+}
+
+.Centre{
+  height: 90vh;
+  width: 50vw;
+}
+
+.Right{
+  height: auto;
+  width: 30vw;
+  background: #f7fbff;
+  border-left: 1px solid #efefef;
+}
+
+.Activities{
+  margin-left: 4vw;
+  padding-top: 2vh; 
+}
+
+.container{
+  height: 10vh;
+  width: 20vw;
+  padding: 2vh;
+  border-bottom: 1px solid #f2f2f2;
+}
+
+.homegly{
+  padding: 10px;
+  font-size: 16px;
+  color: #2684d6;
+}
+
+.homeButton{
+  padding: 10px;
+  font-size: 16px;
+  margin-left: 3vw; 
+}
+
+.CentreBar{
+  height: 10vh;
+  background: #f7fafc;
+  border-bottom: 1px solid #f2f2f2;
+  padding: 5px 0px 5px 0px;
+}
+
+.detailbar{
+  height: 8vh;
+  display: flex;
+  border-bottom: 1px solid white;
+  border-top: 1px solid white;
+}
+
+.acc{
+  padding: 12px 0px 12px 15px;
+  margin-right: 2vw;
+  margin-left: 4vw;
+}
+
+.dropbutton{
+  margin-top: 4px;
+  margin-left: 8vw;
+}
+
+.Count{
+  height: 35vh;
+  border-bottom: 1px solid #f2f2f2;
+  display: flex;
+  padding: 2.5vh;
+}
+
+.invocation{
+  height: 30vh;
+  width: 25vw;
+  border: 1px solid #f2f2f2;
+  box-shadow: 1px 3px 3px 1px #888888;
+  margin-right: 0.5vw;
+}
+
+.nameCount{
+  padding: 6px 3px 4px 5px;
+  margin-left: 0.5vw;
+}
+
+.memory{
+  height: 30vh;
+  width: 25vw;
+  border: 1px solid #f2f2f2;
+  box-shadow: 1px 3px 3px 1px #888888;
+  margin-left: 0.5vw;
+}
+
+.namebar{
+  height: 6vh;
+  border-bottom: 2px solid #f2f2f2;
+  display: flex;
+}
+
+.imgconfig{
+  padding: 7px 0px 0px 0px;
+  margin-left: 1vw;
+  color: #2d7fc6;
+}
+
+.displaybar{
+  height: 18vh;
+}
+
+.displayValue{
+  padding: 6vh 10vw 6vh 10vw;
+  font-size: 30px;
+}
+
+.displayMem{
+  padding: 6vh 5vw 6vh 5vw;
+  font-size: 30px;
+}
+
+.bar{
+  height: 12vh;
+  border-top: 2px solid #f2f2f2; 
+  padding: 9px;
+}
+
+.barProgress{
+
+}
+
+.request{
+  height:45vh;
+  border-bottom: 1px solid #f2f2f2;
+}
+
+.requestname{
+  height: 3vh;
+  padding: 1vw;
+}
+
+.rightBox{
+  height: 13vh;
+  padding: 11px;
+  margin-left: 3px;
+  margin-top: 1px;
+  border-radius: 5px;
+  border-bottom: 1px solid #f2f2f2;
+}
+
+.activityTitle{
+  font-family: sans-serif;
+  display: flex;
+}
+
+.activityTitle > p#objectname{
+  width: 18vw;
+  font-size: 14px;
+}
+
+.activityTitle > p#updatedAt{
+  width: 12vw;
+  font-size: 11px;
+  padding-left: 2vw;
+  opacity: 0.8;
+  color: #06326b;
+}
+
+#str{
+  font-size: 13px;
+  color: #4f4f4f;
+}
