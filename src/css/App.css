@@ -93,7 +93,7 @@
 }
 
 .Activities{
-  margin-left: 4vw;
+  margin-left: 1vw;
   padding-top: 2vh; 
 }
 
@@ -121,6 +121,7 @@
   background: #f7fafc;
   border-bottom: 1px solid #f2f2f2;
   padding: 5px 0px 5px 0px;
+  display: flex;
 }
 
 .detailbar{
@@ -133,7 +134,12 @@
 .acc{
   padding: 12px 0px 12px 15px;
   margin-right: 2vw;
-  margin-left: 4vw;
+}
+
+.accimg{
+  padding: 12px 0px 12px 15px;
+  margin-left: 1vw;
+  color: #2684d6;
 }
 
 .dropbutton{
@@ -227,6 +233,12 @@
 .activityTitle{
   font-family: sans-serif;
   display: flex;
+}
+
+.activityimg{
+  margin-left: 2vw;
+  padding-top: 2vh;
+  color: #2684d6;
 }
 
 .activityTitle > p#objectname{

@@ -10,7 +10,7 @@ export default class Nav extends React.Component{
 	      				<button className="ButtonOut"> </button>
 	      			</div>
 	      			<div className="nameDisplay">
-	      				<p> backbench </p>
+	      				<p> bench </p>
 	      			</div>
 	      		</div>
 	      		<div className="NavRight"> 

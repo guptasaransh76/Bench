@@ -25,9 +25,10 @@ export default class Center extends React.Component{
 			<div className="Centre">
   			<div className="CentreBar">
   				<div className="detailbar">
+            <p className="accimg"><span class="glyphicon glyphicon-th-large"></span></p>
   					<p className="acc"> Account Usage at {moment().format('MMMM Do YYYY, h:mm:ss a')} </p>
   					<div className="dropbutton">
-					<select id="inputState" className="btn btn-dafault form-control " placeholder="Filter" onChange={this.selectHandler}>
+					<select id="inputState" className="btn btn-default form-control" placeholder="Filter" onChange={this.selectHandler}>
 			                  <option value="today">Today</option>
 	                  <option value="week">Last 7 days</option>
 	                  <option value="month">This Month</option>

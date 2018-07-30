@@ -18,6 +18,7 @@ export default class Left extends React.Component{
 		return(
 			<div className="Right">
   			<div className="CentreBar">
+  				<p className="activityimg"><span class="glyphicon glyphicon-list-alt"></span></p>
   				<p className="Activities">Account Activities</p>
   			</div>
   			<div>
