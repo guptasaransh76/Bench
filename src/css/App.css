@@ -104,6 +104,20 @@
   border-bottom: 1px solid #f2f2f2;
 }
 
+.Left > #container1:hover{
+  background: #8f9baa;
+}
+.Left > .leftcontainer:hover{
+  background: #8f9baa;
+}
+
+.leftcontainer{
+  height: 8vh;
+  width: 20vw;
+  padding: 1vh 1vh 1vh 2vh;
+  border-bottom: 1px solid #f2f2f2;
+}
+
 .homegly{
   padding: 10px;
   font-size: 16px;
@@ -113,7 +127,7 @@
 .homeButton{
   padding: 10px;
   font-size: 16px;
-  margin-left: 3vw; 
+  margin-left: 1vw; 
 }
 
 .CentreBar{
@@ -197,8 +211,13 @@
 }
 
 .displayMem{
-  padding: 6vh 5vw 6vh 5vw;
+  padding: 6vh 4vw 6vh 4vw;
   font-size: 30px;
+}
+
+.byte{
+  font-family: monospace;
+  opacity: 0.7;
 }
 
 .bar{
@@ -212,7 +231,7 @@
 }
 
 .request{
-  height:45vh;
+  height: 48vh;
   border-bottom: 1px solid #f2f2f2;
 }
 

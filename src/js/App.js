@@ -6,6 +6,8 @@ import Left from './components/Left';
 import Center from './components/Center';
 import Right from './components/Right';
 
+// import getMemory from './api/axios';
+
 var instance = undefined;
 
 const getInstance = () => {
@@ -33,15 +35,6 @@ class App extends Component {
 			activities: [],
 			results: []
 		}
-	}
-
-	handleColorChange = (e) => {
-		// console.log('e', e.target.style);
-		document.querySelector("#container").style.background = "#bfbfbf";
-	}
-	handleOut = (e) => {
-		// console.log('e', e.target.style);
-		document.querySelector("#container").style.background = "#e3eaef";
 	}
 
 	selectHandler = (e) => {
@@ -143,24 +136,36 @@ class App extends Component {
 
 	}
 
+	handleClick = () => {
+		// console.log('clicked');
+		this.props.history.push('/bench');
+	}
+
+	handleHome = () => {
+		// console.log('clicked');
+		this.props.history.push('/');
+	}
+
   render() {
 
     return (
       <div className="App">
+
       	<Nav />
+
       	
       	<div className="Bottom">
       		<Left 
-      			handleColorChange={this.handleColorChange}
-      			handleOut={this.handleOut}
-      		/>
+      			handleClick={this.handleClick}
+      			handleHome={this.handleHome}
 
+      		/>
+      		
       		<div className="main">
 	      		<Center 
 	      			memory={this.state.memory}
 	      			invocation={this.state.invocation}
 	      			results={this.state.results}
-
 	      		/>
 	      		
 	      		<Right 

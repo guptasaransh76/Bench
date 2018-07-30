@@ -25,22 +25,22 @@ export default class Center extends React.Component{
 			<div className="Centre">
   			<div className="CentreBar">
   				<div className="detailbar">
-            <p className="accimg"><span class="glyphicon glyphicon-th-large"></span></p>
+            <p className="accimg"><span className="glyphicon glyphicon-th-large"></span></p>
   					<p className="acc"> Account Usage at {moment().format('MMMM Do YYYY, h:mm:ss a')} </p>
   					<div className="dropbutton">
-					<select id="inputState" className="btn btn-default form-control" placeholder="Filter" onChange={this.selectHandler}>
-			                  <option value="today">Today</option>
-	                  <option value="week">Last 7 days</option>
-	                  <option value="month">This Month</option>
-	                  <option value="custom">Custom</option>
-	               	</select>
-	            </div>
+			        <select id="inputState" className="btn btn-default form-control" placeholder="Filter" onChange={this.selectHandler}>
+	             <option value="today">Today</option>
+                <option value="week">Last 7 days</option>
+                <option value="month">This Month</option>
+                <option value="custom">Custom</option>
+             	</select>
+	           </div>
   				</div>
   			</div>
   			<div className="Count">
   				<div className="invocation">
   					<div className="namebar">
-  						<p className="imgconfig"> <span className="glyphicon glyphicon-floppy-disk"></span></p>
+  						<p className="imgconfig"> <span className="glyphicon glyphicon-transfer"></span></p>
   						<p className="nameCount">Invocation Count</p>
   					</div>
   					<div className="displaybar">
@@ -63,7 +63,7 @@ export default class Center extends React.Component{
   						</div>
   					</div>
   					<div className="displaybar">
-  						<p className="displayMem"> {this.props.invocation === '' ? 0 : this.props.invocation}Bytes</p>
+  						<p className="displayMem"> {this.props.invocation === '' ? 0 : this.props.invocation}<span className="byte"> Bytes</span></p>
   					</div>
   					<div className="bar">
   						<div className="progress barProgress">

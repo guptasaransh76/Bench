@@ -71,7 +71,7 @@ renderTable() {
     return (
       <Table className="table table-striped"
         noDataText="No matching records found"
-        itemsPerPage={3}
+        itemsPerPage={4}
         currentPage={0}
         data={this.state.rows}
         pageButtonLimit={5}>

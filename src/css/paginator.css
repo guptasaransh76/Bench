@@ -1,3 +1,7 @@
+.custom-pagination{
+
+}
+
 .custom-pagination > .reactable-current-page {
     color: #fff;
     cursor: default;
