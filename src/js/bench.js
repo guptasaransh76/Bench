@@ -4,6 +4,8 @@ import axios from 'axios';
 import Nav from './components/Nav';
 import Left from './components/Left';
 import RightBench from './components/rightBench';
+import BenchLeft from './components/bench/benchLeft';
+
 
 
 var instance = undefined;
@@ -28,7 +30,8 @@ export default class bench extends React.Component{
 	constructor(){
 		super();
 		this.state = {
-			bench: []
+			bench: [],
+			inBench: false
 		}
 	}
 	handleHome = () => {
@@ -57,18 +60,37 @@ export default class bench extends React.Component{
 			})
 		});
 	}
+
+	clickHandler = () => {
+		console.log('bench clicked');
+		this.setState({
+			...this.state,
+			isBench: true
+		});
+
+	}
+
 	render(){
 		return(
 			<div className="App">
 		      	<Nav />
 		      	<div className="Bottom">
+		      	{!this.state.isBench &&
 		      		<Left 
 						handleHome={this.handleHome}
 					/>
+		      	}
+		      	{
+		      		this.state.isBench &&
+		      			<BenchLeft />
+		      	}
+
 		      		
 		      		<div className="main">
 			      		<RightBench 
 			      			bench={this.state.bench}
+			      			clickHandler={this.clickHandler}
+			      			isBench={this.state.isBench}
 			      		/>
 			      	</div>
 		      	</div>
