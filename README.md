@@ -15,9 +15,14 @@ Open Mozilla Firefox or Google Chrome.
 
 - Enjoy!!
 
->The screenshot shows the UI of the widget.
+> The main dashboard of the app.
+<img width="960" alt="img1" src="https://user-images.githubusercontent.com/30376024/43475040-286a9528-9512-11e8-989a-3adc35f4276a.PNG">
 
-![screen shot 2018-05-22 at 8 33 57 pm](https://user-images.githubusercontent.com/30376024/40372907-53a534a0-5e03-11e8-93ba-a0cf5e89169d.png)
+> My Bench
+<img width="960" alt="img2" src="https://user-images.githubusercontent.com/30376024/43475050-2f453164-9512-11e8-942b-145fee52a358.PNG">
+
+> Bench 1
+<img width="960" alt="img3" src="https://user-images.githubusercontent.com/30376024/43475057-3184997e-9512-11e8-83ab-0867dd9e80f0.PNG">
 
 
 
