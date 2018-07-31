@@ -31,7 +31,8 @@ export default class bench extends React.Component{
 		super();
 		this.state = {
 			bench: [],
-			inBench: false
+			inBench: false,
+			runtime: []
 		}
 	}
 	handleHome = () => {
@@ -44,6 +45,8 @@ export default class bench extends React.Component{
 		const getBench = () => {
 			return getInstance().get('/5b4daf683100006e0b5ebd1a');
 		}
+
+
 
 		getBench().then((response) => {
 			console.log('success', response.data.reply);
@@ -59,13 +62,46 @@ export default class bench extends React.Component{
 				err: err
 			})
 		});
+
+		
+	
 	}
+
 
 	clickHandler = () => {
 		console.log('bench clicked');
+
+		const getRuntime = () => {
+			return getInstance().get('/5b4dafc131000055005ebd20');
+		}
+
 		this.setState({
 			...this.state,
 			isBench: true
+		});
+
+		getRuntime().then((response) => {
+			console.log('success', response.data.reply);
+			this.setState({
+				...this.state,
+				runtime: response.data.reply
+			});
+
+		}).catch((err) => {
+			console.log('in catch');
+			this.setState({
+				...this.state,
+				err: err
+			})
+		});
+
+	}
+
+	clickBench = () => {
+		console.log('bench clicked on left panel');
+		this.setState({
+			...this.state,
+			isBench: false
 		});
 
 	}
@@ -82,7 +118,9 @@ export default class bench extends React.Component{
 		      	}
 		      	{
 		      		this.state.isBench &&
-		      			<BenchLeft />
+		      			<BenchLeft 
+		      				clickBench={this.clickBench}
+		      			/>
 		      	}
 
 		      		
@@ -91,6 +129,7 @@ export default class bench extends React.Component{
 			      			bench={this.state.bench}
 			      			clickHandler={this.clickHandler}
 			      			isBench={this.state.isBench}
+			      			runtime={this.state.runtime}
 			      		/>
 			      	</div>
 		      	</div>

@@ -5,18 +5,27 @@ import BenchCentre from './bench/benchCenter';
 import BenchActivities from './bench/benchActivities';
 
 export default class benchRight extends React.Component{
+	constructor(){
+		super();
+		this.state = {
+			run: []
+		}
+	}
 	 
-	 // componentWillReceiveProps(nextProps) {
-		//   	let updatedAt = nextProps.bench.map((val) => { 
-		//   		let t = moment(val.createdAt).fromNow();
-		//   		console.log('time', t);
-		//   	});
-		//     // console.log(nextProps);
-		// }
+	 componentWillReceiveProps(nextProps) {
+		  	// let updatedAt = nextProps.bench.map((val) => { 
+		  	// 	let t = moment(val.createdAt).fromNow();
+		  	// 	console.log('time', t);
+		  	// });
+		    // console.log(nextProps);
+			this.setState({
+				...this.state,
+				run: nextProps.runtime
+			});
+		}
 	render(){
 		return(
 			<div>
-  				</div>
   				 {!this.props.isBench &&
 			          this.props.bench.map((row, idx) => (
 			            <div className="Box" key={idx} onClick={this.props.clickHandler}>
@@ -34,7 +43,9 @@ export default class benchRight extends React.Component{
 			      {
 			      	this.props.isBench &&
 			      		<div style={{"display": "flex"}}>
-			      			<BenchCentre />
+			      			<BenchCentre 
+			      				run={this.state.run}
+			      			/>
 
 			      			<BenchActivities />
 			      		</div>

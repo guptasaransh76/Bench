@@ -1,6 +1,6 @@
 import React from 'react';
 import moment from 'moment';
-import Table from '../../reactTable';	
+import RuntimeTable from '../../runtimeTable';	
 
 
 
@@ -17,7 +17,7 @@ export default class benchCenter extends React.Component{
 
     this.setState({
       ...this.state,
-      tablerows: nextProps.results
+      tablerows: nextProps.run
     });
   }
 	render(){
@@ -32,7 +32,7 @@ export default class benchCenter extends React.Component{
   				<div className="request">
   				<div className="requestname">
   					<p>Passed Request</p>
-  					<Table 
+  					<RuntimeTable 
               results={this.state.tablerows}
             />
   				</div>

@@ -14,7 +14,7 @@ export default class benchLeft extends React.Component{
 		return(
 			<div className="Left">
 				<div id="container1" className="container text-center">
-		  			<div style={{  "display": "flex"}} onClick={this.props.handleHome}>
+		  			<div style={{  "display": "flex"}} onClick={this.props.clickBench}>
 		  				<p className="homegly"><span className="glyphicon glyphicon-home"></span></p>
 		  				<a className="homeButton"> My bench </a>
 					</div>
